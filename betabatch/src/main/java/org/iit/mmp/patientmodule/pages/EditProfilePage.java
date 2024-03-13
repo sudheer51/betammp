@@ -9,9 +9,9 @@ public class EditProfilePage {
 		this.driver = driver;
 		
 	}
-	public void editFirstName()
+	public String editFirstName()
 	{
-		
+		return "";
 	}
 
 }
