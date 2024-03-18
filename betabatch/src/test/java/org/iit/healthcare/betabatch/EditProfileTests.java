@@ -17,6 +17,7 @@ public class EditProfileTests extends BaseClass{
 		mmpLib.moduleNavigation("Profile");
 		EditProfilePage editProfile = new EditProfilePage(driver);
 		String output = editProfile.editFirstName();
+		System.out.println(output);
 		Assert.assertNotNull(output);
 		
 	
