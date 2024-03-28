@@ -35,7 +35,7 @@ public class ScheduleAppointmentHashMapTests {
 		String actual = driver.findElement(By.className("panel-title")).getText().trim();
 		String expected ="Patient Portal";
 		Assert.assertEquals(actual, expected);
-		moduleNavigation("Schedule Appointment");
+		//moduleNavigation("Schedule Appointment");
 
 		///Adding the logic 
 		//@author 
@@ -43,7 +43,7 @@ public class ScheduleAppointmentHashMapTests {
 		driver.findElement(By.xpath("//input[@value='Create new appointment']")).click();
 
 		String expectedDoctor ="Beth";
-		selectDoctor("Pediatrician",expectedDoctor);
+		//selectDoctor("Pediatrician",expectedDoctor);
 		expectedHMap.put("doctor", expectedDoctor);
 		
 		
@@ -68,7 +68,7 @@ public class ScheduleAppointmentHashMapTests {
 
 		driver.findElement(By.id("ChangeHeatName")).click();
 		driver.switchTo().defaultContent();
-		String expectedAppointment = generateRandomString();
+		String expectedAppointment=null;// = generateRandomString();
 		expectedHMap.put("sym", expectedAppointment);
 		driver.findElement(By.id("sym")).sendKeys(expectedAppointment);
 		

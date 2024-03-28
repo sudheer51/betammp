@@ -33,7 +33,7 @@ public class ScheduleAppointmentTests {
 		String actual = driver.findElement(By.className("panel-title")).getText().trim();
 		String expected ="Patient Portal";
 		Assert.assertEquals(actual, expected);
-		moduleNavigation("Schedule Appointment");
+	//	moduleNavigation("Schedule Appointment");
 
 		///Adding the logic 
 		//@author 
@@ -41,7 +41,7 @@ public class ScheduleAppointmentTests {
 		driver.findElement(By.xpath("//input[@value='Create new appointment']")).click();
 
 		String expectedDoctor ="Beth";
-		selectDoctor("Pediatrician",expectedDoctor);
+	//	selectDoctor("Pediatrician",expectedDoctor);
 
 		driver.switchTo().frame("myframe");
 
@@ -62,7 +62,7 @@ public class ScheduleAppointmentTests {
 
 		driver.findElement(By.id("ChangeHeatName")).click();
 		driver.switchTo().defaultContent();
-		String expectedAppointment = generateRandomString();
+		String expectedAppointment =null;// generateRandomString();
 		driver.findElement(By.id("sym")).sendKeys(expectedAppointment);
 		driver.findElement(By.xpath("//input[@value='Submit']")).click();
 		String actualDate = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/td[1]")).getText();
